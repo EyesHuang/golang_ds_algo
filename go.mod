@@ -1,4 +1,4 @@
-module ds_algo
+module golang_ds_algo
 
 go 1.19
 

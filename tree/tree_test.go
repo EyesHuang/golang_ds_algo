@@ -1,7 +1,7 @@
 package tree_test
 
 import (
-	algoTree "ds_algo/tree"
+	algoTree "golang_ds_algo/tree"
 	"testing"
 )
 
