@@ -25,6 +25,20 @@ func printPreOrder(n *Node) {
 	printPreOrder(n.right)
 }
 
+func (t *Tree) PrintPostOrder() {
+	printPostOrder(t.root)
+}
+
+func printPostOrder(n *Node) {
+	if n == nil {
+		return
+	}
+
+	printPostOrder(n.left)
+	printPostOrder(n.right)
+	fmt.Print(n.value, " ")
+}
+
 // LevelOrderBinaryTree
 // Time Complexity: O(n)
 // Space Complexity: O(n)
