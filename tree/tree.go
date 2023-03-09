@@ -10,6 +10,8 @@ type Tree struct {
 	root *Node
 }
 
+// PrintTree
+// Time Complexity: O(n)
 func (t *Tree) PrintTree() {
 	fmt.Print("Tree : ")
 	printPreOrder(t.root)
@@ -25,6 +27,8 @@ func printPreOrder(n *Node) {
 	printPreOrder(n.right)
 }
 
+// PrintPostOrder
+// Time Complexity: O(n)
 func (t *Tree) PrintPostOrder() {
 	printPostOrder(t.root)
 }
@@ -37,6 +41,20 @@ func printPostOrder(n *Node) {
 	printPostOrder(n.left)
 	printPostOrder(n.right)
 	fmt.Print(n.value, " ")
+}
+
+func (t *Tree) PrintInOrder() {
+	printInOrder(t.root)
+}
+
+func printInOrder(n *Node) {
+	if n == nil {
+		return
+	}
+
+	printInOrder(n.left)
+	fmt.Print(n.value, " ")
+	printInOrder(n.right)
 }
 
 // LevelOrderBinaryTree
